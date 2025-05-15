@@ -1,4 +1,28 @@
 @import "tailwindcss";
+@plugin "tailwindcss-animate";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --breakpoint-xs: 475px;
+  --color-primary-100: #FFE8F0;
+  --color-primary: #EE2B69;
+  --color-secondary: #FBE843;
+  --color-black-100: #333333;
+  --color-black-200: #141413;
+  --color-black-300: #7D8087;
+  --color-black: #000000; 
+  --color-white-100: #F7F7F7;
+  --color-white: #FFFFFF;
+  --font-work-sans: "var(--font-work-sans)";
+  /* Assuming this CSS variable is defined elsewhere */
+  --radius-lg: var(--radius);
+  /* Assuming this CSS variable is defined elsewhere */
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+  --shadow-100: 2px 2px 0px 0px rgb(0 0 0);
+  --shadow-200: 2px 2px 0px 2px rgb(0 0 0);
+  --shadow-300: 2px 2px 0px 2px rgb(238 43 105);
+}
 
 :root {
   --background: #ffffff;
