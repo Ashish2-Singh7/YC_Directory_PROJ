@@ -3,48 +3,183 @@
 @plugin "@tailwindcss/typography";
 
 @theme {
-  --breakpoint-xs: 475px;
-  --color-primary-100: #FFE8F0;
-  --color-primary: #EE2B69;
-  --color-secondary: #FBE843;
-  --color-black-100: #333333;
-  --color-black-200: #141413;
-  --color-black-300: #7D8087;
-  --color-black: #000000; 
-  --color-white-100: #F7F7F7;
-  --color-white: #FFFFFF;
-  --font-work-sans: "var(--font-work-sans)";
-  /* Assuming this CSS variable is defined elsewhere */
-  --radius-lg: var(--radius);
-  /* Assuming this CSS variable is defined elsewhere */
-  --radius-md: calc(var(--radius) - 2px);
-  --radius-sm: calc(var(--radius) - 4px);
-  --shadow-100: 2px 2px 0px 0px rgb(0 0 0);
-  --shadow-200: 2px 2px 0px 2px rgb(0 0 0);
-  --shadow-300: 2px 2px 0px 2px rgb(238 43 105);
+    --breakpoint-xs: 475px;
+    --color-primary-100: #FFE8F0;
+    --color-primary: #EE2B69;
+    --color-secondary: #FBE843;
+    --color-black-100: #333333;
+    --color-black-200: #141413;
+    --color-black-300: #7D8087;
+    --color-black: #000000;
+    --color-white-100: #F7F7F7;
+    --color-white: #FFFFFF;
+    --font-work-sans: "var(--font-work-sans)";
+    /* Assuming this CSS variable is defined elsewhere */
+    --radius-lg: var(--radius);
+    /* Assuming this CSS variable is defined elsewhere */
+    --radius-md: calc(var(--radius) - 2px);
+    --radius-sm: calc(var(--radius) - 4px);
+    --shadow-100: 2px 2px 0px 0px rgb(0 0 0);
+    --shadow-200: 2px 2px 0px 2px rgb(0 0 0);
+    --shadow-300: 2px 2px 0px 2px rgb(238 43 105);
 }
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@layer utilities {
+    .flex-between {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .text-30-extrabold {
+        font-size: 30px;
+        font-weight: 800;
+        color: #FFFFFF;
+    }
+
+    .text-30-bold {
+        font-size: 30px;
+        font-weight: bold;
+        color: #000000;
+    }
+
+    .text-30-semibold {
+        font-size: 30px;
+        font-weight: 600;
+        color: #000000;
+    }
+
+    .text-26-semibold {
+        font-weight: 600;
+        font-size: 26px;
+        color: #000000;
+    }
+
+    .text-24-black {
+        font-size: 24px;
+        font-weight: 900;
+        color: #000000;
+    }
+
+    .text-20-medium {
+        font-weight: 500;
+        font-size: 20px;
+        color: #000000;
+    }
+
+    .text-16-medium {
+        font-weight: 500;
+        font-size: 16px;
+        color: #000000;
+    }
+
+    .text-14-normal {
+        font-weight: 400;
+        font-size: 14px;
+        color: rgba(247, 247, 247, 0.8);
+        /* text-white-100/80 */
+    }
+
+     .pink_container {
+        width: 100%;
+        background-color: var(--color-primary);
+        min-height: 530px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        background-image: linear-gradient(
+                to right,
+                transparent 49.5%,
+                rgba(251, 232, 67, 0.2) 49.5%,
+                rgba(251, 232, 67, 0.6) 50.5%,
+                transparent 50.5%
+        );
+        background-size: 5% 100%;
+        background-position: center;
+        background-repeat: repeat-x;
+    }
+
+    .tag {
+        background-color: var(--color-secondary);
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem;
+        font-family: var(--font-work-sans), sans-serif;
+        font-weight: bold;
+        border-radius: 0.125rem;
+        text-transform: uppercase;
+        position: relative;
+    }
+
+    .heading {
+        text-transform: uppercase;
+        background-color: var(--color-black);
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem;
+        font-family: var(--font-work-sans), sans-serif;
+        font-weight: 800;
+        color: #fff;
+        font-size: 36px;
+        line-height: 46px;
+        max-width: 64rem;
+        text-align: center;
+        margin-top: 1.25rem;
+        margin-bottom: 1.25rem;
+    }
+
+    @media (min-width: 640px) {
+        .heading {
+            font-size: 54px;
+            line-height: 64px;
+        }
+    }
+
+    .sub-heading {
+        font-weight: 500;
+        font-size: 20px;
+        color: #fff;
+        max-width: 42rem;
+        text-align: center;
+        word-break: break-word;
+    }
+
+    .section_container {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
+        max-width: 80rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .card_grid {
+        display: grid;
+        gap: 1.25rem;
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+
+    @media (min-width: 640px) {
+        .card_grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+    }
+
+    @media (min-width: 768px) {
+        .card_grid {
+            grid-template-columns: repeat(3, minmax);
+        }
+    }
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.w-md-editor-toolbar {
+    padding: 10px !important;
 }
