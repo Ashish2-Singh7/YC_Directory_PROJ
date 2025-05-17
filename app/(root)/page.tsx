@@ -10,7 +10,7 @@ export default async function Home({ searchParams }: { searchParams: Promise<{ q
   const { data: posts } = await sanityFetch({ query: STARTUPS_QUERY, params });
 
   const session = await auth();
-  console.log(session?.id); // caching mechanism is crucial to undetstand in NEXT JS
+  // console.log(session?.id); // caching mechanism is crucial to undetstand in NEXT JS
   
   return (
     <>
