@@ -75,5 +75,3 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
 };
 
 export default Page;
-
-// 3:18:36
