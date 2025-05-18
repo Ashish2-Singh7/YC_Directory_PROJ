@@ -1,36 +1,36 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 YC Directory
 
-## Getting Started
+**YC Directory** is a community-driven platform for discovering and sharing great startup pitches. Inspired by the spirit of innovation and entrepreneurship, it allows users to explore, contribute, and get inspired by startup ideas and their pitches — all in one place.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## ✨ Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- 🔍 **Browse Startup Pitches** – Discover pitches submitted by others in the startup community.
+- 📝 **Submit Your Own** – Add your own pitch with title, description, video links, and more.
+- 🔐 **Authentication** – Secure login/signup with [NextAuth.js](https://next-auth.js.org).
+- 🔧 **CMS Powered by Sanity** – Manage content with ease through a headless CMS.
+- ⚡ **Instant Updates** – Real-time content updates and revalidation via Sanity + Next.js ISR.
+- 🌐 **Community-Driven** – Anyone can contribute pitches and vote on the best ones.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🛠 Tech Stack
 
-## Learn More
+| Technology       | Description                              |
+|------------------|------------------------------------------|
+| [Next.js](https://nextjs.org) | React framework for SSR/SSG, routing, and API routes |
+| [TypeScript](https://www.typescriptlang.org) | Type-safe development experience |
+| [Sanity.io](https://www.sanity.io) | Headless CMS for managing pitch data |
+| [NextAuth.js](https://next-auth.js.org) | Authentication provider for Next.js |
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## **🚀Live Preview**
+   
+For Live Preview, Visit the link below:
+https://yc-directory-31-dvqqddavt-ashish2-singh7s-projects.vercel.app/
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+_Last updated: 18-05-2025_
